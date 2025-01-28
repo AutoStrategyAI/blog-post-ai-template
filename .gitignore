@@ -1,0 +1,40 @@
+# .gitignore for Jekyll
+
+# Destination folder
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Log and debug files
+*.log
+*.swp
+*.swo
+
+# Temporary and backup files
+*.tmp
+*.bak
+*.backup
+*.DS_Store
+Thumbs.db
+
+# Bundler dependencies
+vendor/bundle/
+vendor/cache/
+vendor/gems/
+vendor/ruby/
+
+# Byebug command history file
+.byebug_history
+
+# Node modules (if using npm or Yarn)
+node_modules/
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Exclude specific config files
+Gemfile.lock
+_config.local.yml
+.env
+.env.local
