@@ -295,6 +295,16 @@ footer {
   text-align: center;
 }
 
+a.call-to-action {
+  border-radius: 5px;
+  padding: 15px 25px;
+  color: black;
+  background-color: white;
+  display: block;
+  width: fit-content;
+  margin-top: 0.5em;
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import 'highlights';
