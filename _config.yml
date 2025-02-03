@@ -84,3 +84,6 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - __init/
+  - init_mac.command
+  - init_windows.bat
