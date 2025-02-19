@@ -14,9 +14,8 @@ $company_colors_primary_background: {{ site.company.colors.primary.background }}
 $company_colors_primary_foreground: {{ site.company.colors.primary.foreground }};
 
 $company_fonts_primary_name: {{ site.company.fonts.primary.name }};
-$company_fonts_primary_files_ttf: {{ site.company.fonts.primary.files.ttf }};
-
 $company_fonts_secondary_name: {{ site.company.fonts.secondary.name }};
+
 /**************/
 /* BASE RULES */
 /**************/
@@ -27,7 +26,7 @@ html {
 
 body {
   background: $company_colors_primary_background;
-  font: 18px/1.4 $company_fonts_secondary_name;
+  font-size: 18px/1.4;
   color: $company_colors_primary_foreground;
 }
 
@@ -211,7 +210,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: #f1f1f1;
+  color: $company_colors_primary_foreground;
   cursor: pointer;
   font-family: $company_fonts_primary_name;
   font-weight: 300;
@@ -221,7 +220,7 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: #f1f1f1;
+  color: $company_colors_primary_foreground;
   font-size: 16px;
 
   @include mobile {
@@ -244,14 +243,13 @@ nav {
 
   a {
     margin-left: 20px;
-    color: #f1f1f1;
+    color: $company_colors_primary_foreground;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
     }
   }
 }
@@ -275,13 +273,9 @@ nav {
     margin: 1.8em 0.8em;
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
-    color: $gray;
+    color: $company_colors_primary_foreground;
     font-size: 22px;
     font-style: italic;
-  }
-
-  .comments {
-    margin-top: 10px;
   }
 
   .read-more {
@@ -294,7 +288,7 @@ nav {
   margin-top: 50px;
   border-top: 1px solid;
   border-bottom: 1px solid;
-  background-color: #18181f;
+  background-color: $company_colors_primary_background;
 }
 
 footer {
