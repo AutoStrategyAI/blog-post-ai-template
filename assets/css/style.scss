@@ -4,31 +4,31 @@
 //
 // IMPORTS
 //
-//$color_bg: {{ site.company.colors.background }};
-//$color_fg: {{ site.company.colors.foreground }};
-
 @import 'reset';
 @import 'variables';
-// Syntax highlighting @import is at the bottom of this file
 
 //
 // CONFIGURATION
 //
-$color_bg: {{ site.company.colors.background }};
-$color_fg: {{ site.company.colors.foreground }};
+$company_colors_primary_background: {{ site.company.colors.primary.background }};
+$company_colors_primary_foreground: {{ site.company.colors.primary.foreground }};
 
+$company_fonts_primary_name: {{ site.company.fonts.primary.name }};
+$company_fonts_primary_files_ttf: {{ site.company.fonts.primary.files.ttf }};
+
+$company_fonts_secondary_name: {{ site.company.fonts.secondary.name }};
 /**************/
 /* BASE RULES */
 /**************/
 
 html {
-  font-size: 100%;
+  font-size: 16px;
 }
 
 body {
-  background: $color_bg;
-  font: 18px/1.4 $helvetica;
-  color: $color_fg;
+  background: $company_colors_primary_background;
+  font: 18px/1.4 $company_fonts_secondary_name;
+  color: $company_colors_primary_foreground;
 }
 
 .container {
@@ -44,8 +44,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Bungee', sans-serif;
-  color: $color_fg;
+  font-family: $company_fonts_primary_name;
+  color: $company_colors_primary_foreground;
 
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -136,17 +136,17 @@ img {
 
 .date {
   font-style: italic;
-  color: $white;
+  color: $company_colors_primary_foreground;
 }
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: $company_colors_primary_background;
+  background: $company_colors_primary_foreground;
 }
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: $company_colors_primary_background;
+  background: $company_colors_primary_foreground;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -213,7 +213,7 @@ img {
   margin: 0;
   color: #f1f1f1;
   cursor: pointer;
-  font-family: 'Bungee', sans-serif;
+  font-family: $company_fonts_primary_name;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -232,7 +232,7 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: 'Bungee', sans-serif;
+  font-family: $company_fonts_primary_name;
   font-size: 18px;
 
   @include mobile {

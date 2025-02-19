@@ -14,7 +14,7 @@
     <![endif]-->
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="https://drinkingdojo.com" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.url }}" />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
@@ -34,7 +34,7 @@
 
           <nav>
             <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="https://www.google.com">Link</a>
+            <a href="{{ site.company.cta.url }}">{{ site.company.cta.text }}</a>
           </nav>
         </header>
       </div>
@@ -44,7 +44,7 @@
       {{ content }}
 
       <nav>
-        <a href="https://www.google.com">This is a link</a>
+        <a href="{{ site.company.cta.url }}">{{ site.company.cta.text }}</a>
       </nav>
     </div>
 

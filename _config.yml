@@ -2,31 +2,39 @@
 # This file contains configuration flags to customize your site
 #
 
-# Name of your site (displayed in the header)
-name: Basic Blog Setup
-title: Basic Blog Setup
-
-# Short bio or description (displayed in the header)
+# Site details (displayed in the header)
+name: Company Blog
+title: Company Blog
 description: A Description of the Blog
 
+# Company details
 company:
-  name:
+  keywords: 
+  cta:
+    text: "Link"
+    url: "/"
   colors:
-    background: "#19191f"
-    foreground: "#f1f1f1"
+    primary:
+      background: "#19191f"
+      foreground: "#f1f1f1"
+    secondary:
+      background: "#19191f"
+      foreground: "#f1f1f1"
   fonts:
     primary:
-      name:
-      file_ttf:
-      file_otf:
-      file_woff:
-      file_woff2:
+      name: "'Bungee', sans-serif"
+      files:
+        ttf: "Bungee-Regular"
+        otf: 
+        woff:
+        woff2:
     secondary:
-      name:
-      file_ttf:
-      file_otf: 
-      file_woff:
-      file_woff2:
+      name: "'Helvetica', sans-serif"
+      files:
+        ttf:
+        otf: 
+        woff:
+        woff2:
 
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
