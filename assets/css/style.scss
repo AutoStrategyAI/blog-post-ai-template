@@ -28,6 +28,8 @@ body {
   background: $company_colors_primary_background;
   font-size: 18px/1.4;
   color: $company_colors_primary_foreground;
+  font-family: $helveticaNeue;
+  line-height: 1.4;
 }
 
 .container {
@@ -281,6 +283,14 @@ nav {
   .read-more {
     text-transform: uppercase;
     font-size: 15px;
+    min-width: 80px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: $company_colors_primary_foreground;
+    color: $company_colors_primary_background;
+    display: inline-block;
   }
 }
 
