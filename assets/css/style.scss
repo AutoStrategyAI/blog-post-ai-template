@@ -306,6 +306,44 @@ footer {
   text-align: center;
 }
 
+/* Pagination */
+.pagination {
+  text-align: center; /* Center align everything */
+  margin-top: 20px;
+  width: 100%;
+}
+
+.pagination a,
+.pagination span {
+  display: inline-block; /* Makes elements sit side by side */
+  text-decoration: none;
+}
+
+/* Ensuring previous and next buttons are properly displayed */
+.pagination .previous,
+.pagination .next {
+  text-align: center;
+  padding: 5px 10px;
+  padding-top: 2px;
+  border-radius: 5px;
+  margin: 5px; /* Spacing between elements */
+  font-weight: bold;
+  background-color: $company_colors_primary_foreground;
+  color: $company_colors_primary_background;
+}
+
+.pagination span.next,
+.pagination span.previous {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.pagination a.previous,
+.pagination a.next {
+  opacity: 1;
+}
+
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import 'highlights';
