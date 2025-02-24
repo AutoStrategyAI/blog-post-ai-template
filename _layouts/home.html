@@ -42,6 +42,7 @@
         {% for post in paginator.posts %}
           {% include post_block.html %}
         {% endfor %}
+
         {% if paginator.total_posts > paginator.per_page %}
         <!-- Pagination links -->
         <div class="pagination">
@@ -67,6 +68,7 @@
     </div>
 
     {% include footer.html %}
+    {% include analytics.html %}
 
   </body>
 
