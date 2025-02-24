@@ -44,18 +44,14 @@ url: https://127.0.0.1:4000/
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: 
 
-#
-# !! You don't need to change any of the configuration flags below !!
-#
-
+# Theme used as a base
 theme: jekyll-swiss
 
-paginate_path: "/:num/"
+# Slug of paginated page
+paginate_path: "/page-:num/"
 
+# Permalink slug (DO NOT TOUCH)
 permalink: /:title/
-
-# The release of Jekyll Now that you're using
-version: v1.2.0
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
