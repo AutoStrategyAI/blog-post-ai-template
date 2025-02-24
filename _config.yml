@@ -13,7 +13,7 @@ logo: images/logo.jpg
 # Company details
 company:
   cta:
-    text: "Link"
+    text: "Visit our website"
     url: "/"
   colors:
     primary:
@@ -60,6 +60,9 @@ baseurl:
 #
 # !! You don't need to change any of the configuration flags below !!
 #
+
+theme: jekyll-swiss
+theme_color: black
 
 paginate: 3
 paginate_path: "/:num/"
