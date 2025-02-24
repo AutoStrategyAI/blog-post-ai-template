@@ -28,24 +28,11 @@ company:
     secondary:
       name: "'Helvetica', sans-serif"
 
-# Includes an icon in the footer for each username you enter
-footer-links:
-  email: contact@test.com
-  twitter:
-  instagram:
-  facebook:
-  linkedin:
-  youtube:
-  dribbble:
-  flickr:
-  github:
-  pinterest:
-  rss: # just type anything here for a working RSS icon
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  googleplus: # anything in your profile username that comes after plus.google.com/
-
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
+
+# Paginate after X amount of posts
+paginate: 3
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
@@ -62,9 +49,7 @@ baseurl:
 #
 
 theme: jekyll-swiss
-theme_color: black
 
-paginate: 3
 paginate_path: "/:num/"
 
 permalink: /:title/
