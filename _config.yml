@@ -16,12 +16,9 @@ company:
     text: "Visit our website"
     url: "/"
   colors:
-    primary:
-      background: "#19191f"
-      foreground: "#f1f1f1"
-    secondary:
-      background: "#19191f"
-      foreground: "#f1f1f1"
+    background: "#19191f"
+    foreground: "#f1f1f1"
+    accent: "#E74727"
   fonts:
     primary:
       name: "'Bungee', sans-serif"
