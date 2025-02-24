@@ -28,12 +28,6 @@ company:
     secondary:
       name: "'Helvetica', sans-serif"
 
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
-
-# Paginate after X amount of posts
-paginate: 3
-
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
 url: https://127.0.0.1:4000/
@@ -42,7 +36,18 @@ url: https://127.0.0.1:4000/
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
+# ONLY NECESSARY ON SUB-PAGE / GITHUB-BASED HOSTING
 baseurl: 
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics:
+
+# Paginate after X amount of posts
+paginate: 3
+
+#
+# NOTHING TO CHANGE BEYOND THIS POINT
+#
 
 # Theme used as a base
 theme: jekyll-swiss
