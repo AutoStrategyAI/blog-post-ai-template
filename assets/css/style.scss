@@ -280,7 +280,8 @@ nav {
     font-style: italic;
   }
 
-  .read-more {
+  .read-more,
+  .call-to-action {
     text-transform: uppercase;
     font-size: 15px;
     min-width: 80px;
@@ -290,7 +291,14 @@ nav {
     font-weight: bold;
     background-color: $company_colors_primary_foreground;
     color: $company_colors_primary_background;
+  }
+
+  .read-more {
     display: inline-block;
+  }
+
+  .call-to-action {
+    display: block;
   }
 }
 
