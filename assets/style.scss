@@ -1,0 +1,40 @@
+---
+---
+
+// Jekyll configurations
+$company_colors_background: {{ site.company.colors.background }};
+$company_colors_foreground: {{ site.company.colors.foreground }};
+$company_colors_accent: {{ site.company.colors.accent }};
+$company_fonts_primary_name: {{ site.company.fonts.primary.name }};
+$company_fonts_secondary_name: {{ site.company.fonts.secondary.name }};
+
+// Color variables
+$color-background: $company_colors_background !default;
+$color-dot-accent: $company_colors_accent !default;
+$color-foreground: $company_colors_foreground !default;
+$color-title: $company_colors_foreground !default;
+$color-body-text: $company_colors_background !default;
+$color-text-accent: $company_colors_accent !default;
+$color-nav-link: $company_colors_accent !default;
+$color-primary-link: $company_colors_accent !default;
+$color-code: #DC3918 !default;
+
+// Font-smoothing class
+.font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Import sass partials (used in all themes)
+@import
+        "variables",
+        "base",
+        "components",
+        "utilities"
+;
+
+// Import custom sass partials
+@import
+        'fix',
+        'extension'
+;
