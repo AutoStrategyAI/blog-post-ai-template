@@ -25,11 +25,11 @@ company:
     accent: "#E74727"
   fonts:
     google:
-      - Bungee
+      - "Roboto:ital,wght@0,100..900;1,100..900"
     heading:
-      name: "'Helvetica Neue'"
+      name: "'Helvetica Neue', 'Roboto'"
     body:
-      name: "'Helvetica Neue'"
+      name: "'Helvetica Neue', 'Roboto'"
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
