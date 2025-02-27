@@ -5,8 +5,8 @@
 $company_colors_background: {{ site.company.colors.background }};
 $company_colors_foreground: {{ site.company.colors.foreground }};
 $company_colors_accent: {{ site.company.colors.accent }};
-$company_fonts_primary_name: {{ site.company.fonts.primary.name }};
-$company_fonts_secondary_name: {{ site.company.fonts.secondary.name }};
+$company_fonts_heading_name: {{ site.company.fonts.heading.name }};
+$company_fonts_body_name: {{ site.company.fonts.body.name }};
 
 // Color variables
 $color-background: $company_colors_background !default;
@@ -17,7 +17,11 @@ $color-body-text: $company_colors_background !default;
 $color-text-accent: $company_colors_accent !default;
 $color-nav-link: $company_colors_accent !default;
 $color-primary-link: $company_colors_accent !default;
-$color-code: #DC3918 !default;
+$color-code: $company_colors_accent !default;
+
+// Font variables
+$heading-font-family: $company_fonts_heading_name, Arial, sans-serif;
+$body-font-family: $company_fonts_body_name, Arial, sans-serif;
 
 // Font-smoothing class
 .font-smoothing {
@@ -25,16 +29,13 @@ $color-code: #DC3918 !default;
   -moz-osx-font-smoothing: grayscale;
 }
 
-// Import sass partials (used in all themes)
+// Import sass partials
 @import
         "variables",
+        "prefix", // fix variables
         "base",
         "components",
-        "utilities"
-;
-
-// Import custom sass partials
-@import
-        'fix',
-        'extension'
+        "utilities",
+        "extension", // extend theme
+        "postfix" // fix theme
 ;

@@ -20,10 +20,10 @@ company:
     foreground: "#f1f1f1"
     accent: "#E74727"
   fonts:
-    primary:
-      name: "'Bungee', sans-serif"
-    secondary:
-      name: "'Helvetica', sans-serif"
+    heading:
+      name: "'Helvetica Neue'"
+    body:
+      name: "'Helvetica Neue'"
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
