@@ -31,6 +31,7 @@ company:
     body:
       name: "'Helvetica Neue', 'Roboto'"
 
+# Navigation items
 navigation:
   - title: "Home"
     url: "/"
