@@ -26,12 +26,13 @@
             </div>
 
             <div class="col-4 sm-width-full left border-top-thin mt-3 mt-lg-0 ml-lg-4 table">
-                <div class="inline-block mt-3 mr-1">
-                  {% include {{ site.social_link | default: "twitter" }}.html %}
+              {% for social in site.company.socials %}
+              {% assign social_platform = social[0] %}
+              {% assign social_username = social[1] %}
+                <div class="inline-block mt-3{% unless forloop.last %} mr-1{% endunless %}">
+                  {% include socials/{{ social_platform }}.html username=social_username icon_size=site.company.icon_size %}
                 </div>
-                <div class="inline-block mt-3">
-                  {% include github.html %}
-                </div>
+                {% endfor %}
             </div>
           </div>
 

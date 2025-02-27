@@ -15,6 +15,10 @@ company:
   cta:
     text: "Visit our website"
     url: "/"
+  socials:
+    github: "hmm"
+    twitter: "hmmmmmmm"
+  icon_size: "32"
   colors:
     background: "#19191f"
     foreground: "#f1f1f1"
