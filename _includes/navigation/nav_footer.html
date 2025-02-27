@@ -1,0 +1,9 @@
+<ul class="list-reset pt-2">
+  {% for nav_page in site.navigation.footer %}
+    {% if nav_page.title %}
+    <li>
+      <a class="align-middle link-primary{% unless forloop.last %} mb-1{% endunless %}" href="{{ nav_page.url | prepend: site.baseurl }}">{{ nav_page.title }}</a>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>

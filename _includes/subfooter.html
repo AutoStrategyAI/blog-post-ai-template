@@ -1,0 +1,23 @@
+{% assign user_url = site.url | append: site.baseurl %}
+{% assign full_base_url = user_url | default: site.github.url %}
+
+<div class="border-top-thin py-2 mt-lg-4">
+    <div class="container mx-auto px-2">
+
+        <!-- Left Section: Logo, Company Name, and Tagline -->
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0 inline-block">
+            <img src="{{ site.logo | prepend: '/assets/' | prepend: full_base_url }}" alt="{{ site.author }} Logo" class="mr-2 logo">
+            <div class="inline-block">
+              <h4 class="mt-0 mb-0">{{ site.author }}</h4>
+              <p class="mb-0">{{ site.description }}</p>
+            </div>
+        </div>
+  
+        <!-- Right Section: Navigation Links -->
+        <div class="col-12 col-lg-3 inline-block">
+          {% include navigation/nav_footer.html %}
+        </div>
+
+    </div>
+  </div>
+  
