@@ -24,6 +24,8 @@ company:
     foreground: "#f1f1f1"
     accent: "#E74727"
   fonts:
+    google:
+      - Bungee
     heading:
       name: "'Helvetica Neue'"
     body:
