@@ -6,9 +6,10 @@
 
   {% capture site_title %}{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% endcapture %}
   <title>{{ site_title }}</title>
+
   {% if page.title %}
-  <meta property="og:title" content="{{ site_title }}" />
-  <meta property="twitter:title" content="{{ site_title }}" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="twitter:title" content="{{ page.title }}" />
   {% endif %}
 
   {% capture site_description %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
