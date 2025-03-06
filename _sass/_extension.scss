@@ -93,6 +93,18 @@ h6, .h6 { font-family: $heading-font-family; }
   vertical-align: middle;
 }
 
+/* Social icons */
+.social-icons {
+  display: table;
+}
+
+.social-icons > img,
+.social-icons > svg
+ {
+  width: $social-icon-size;
+  height: $social-icon-size;
+}
+
 /* Call to action */
 .call-to-action {
   font-size: 1.5em;
@@ -128,7 +140,6 @@ h6, .h6 { font-family: $heading-font-family; }
   padding-top: 2px;
   border-radius: 5px;
   margin: 5px;
-  font-weight: bold;
   background-color: $color-foreground;
   color: $color-background;
 }
@@ -136,33 +147,27 @@ h6, .h6 { font-family: $heading-font-family; }
 .pagination span.next,
 .pagination span.previous {
   cursor: default;
-  opacity: 0.6;
 }
 
 .pagination a.previous,
 .pagination a.next {
   opacity: 1;
+  font-weight: bold;
 }
 
-.footer-footnotes {
-  font-size: 0.8em;
-}
-
+/* Company Logo */
 .logo {
   max-width: 100px;
   display: inline-block;
   border-radius: 0.4em;
 }
 
-.social-icons {
-  display: table;
+@media (max-width: $breakpoint-lg) {
+  .logo {
+    margin-bottom: $spacer-2;
+  }
 }
 
-.social-icons > img,
-.social-icons > svg
- {
-  width: $social-icon-size;
-  height: $social-icon-size;
 /* Footer */
 .footer-menu {
   margin-top: $spacer-3;
@@ -184,6 +189,14 @@ h6, .h6 { font-family: $heading-font-family; }
   }
 }
 
+/* Middle section content container */
 .section-content {
   min-height: 80vh;
+}
+
+@media (max-width: $breakpoint-lg) {
+  .section-content {
+    padding-top: $spacer-2;
+    padding-bottom: $spacer-2;
+  }
 }
