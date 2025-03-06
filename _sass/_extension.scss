@@ -163,6 +163,25 @@ h6, .h6 { font-family: $heading-font-family; }
  {
   width: $social-icon-size;
   height: $social-icon-size;
+/* Footer */
+.footer-menu {
+  margin-top: $spacer-3;
+}
+
+.footer-footnotes {
+  font-size: 0.8em;
+}
+
+@media (min-width: $breakpoint-lg) {
+  .footer-menu {
+    margin-top: 0;
+    text-align: right;
+    float: right;
+  }
+
+  .footer-footnotes {
+    text-align: right;
+  }
 }
 
 .section-content {
