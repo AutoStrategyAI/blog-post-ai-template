@@ -1,8 +1,7 @@
 {% assign user_url = site.url | append: site.baseurl %}
 {% assign full_base_url = user_url | default: site.github.url %}
 
-<div class="border-bottom-thick header-border">
-  <div class="clearfix container px-2 mx-auto mt-3 mb-4">
+  <div class="clearfix container px-2 mx-auto my-3">
     <div class="sm-width-full left container mx-auto">
       <a href="/" class="mr-2 inline-block valign-middle"><img src="{{ site.logo | prepend: '/assets/' | prepend: full_base_url }}" alt="{{ site.author }} Logo" class="logo"></a>
       <div class="inline-block valign-top">
@@ -15,5 +14,4 @@
       {% include navigation/nav_footer.html %}
     </div>
   </div>
-</div>
   
