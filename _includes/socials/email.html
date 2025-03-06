@@ -1,0 +1,8 @@
+{% assign social_link = "mailto:" | append: include.username %}
+{% assign social_title = "Contact us via mail" %}
+{% assign viewbox_size = "0 0 256 256" %}
+{% capture social_svg_content %}
+<path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-8,144H40V74.2l82.6,75.7a8,8,0,0,0,10.8,0L216,74.2V192Z"/>
+{% endcapture %}
+
+{% include socials/_social_icon.html icon_size=site.company.icon_size link=social_link title=social_title viewbox_size=viewbox_size svg_content=social_svg_content %}

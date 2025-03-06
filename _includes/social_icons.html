@@ -1,9 +1,11 @@
-<div class="table">
+<div class="table social-icons">
     {% for social in site.company.socials %}
-    {% assign social_platform = social[0] %}
-    {% assign social_username = social[1] %}
+      {% assign social_platform = social[0] %}
+      {% assign social_username = social[1] %}
+      {% if social_username %}
       <div class="inline-block{% unless forloop.last %} mr-1{% endunless %}">
         {% include socials/{{ social_platform }}.html username=social_username icon_size=site.company.icon_size %}
       </div>
-      {% endfor %}
+      {% endif %}
+    {% endfor %}
   </div>

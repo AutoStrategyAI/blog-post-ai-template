@@ -1,0 +1,8 @@
+{% assign social_link = "https://instagram.com/" | append: include.username %}
+{% assign social_title = "Follow me on Instagram" %}
+{% assign viewbox_size = "0 0 256 256" %}
+{% capture social_svg_content %}
+<circle cx="128" cy="128" r="32"/><path d="M172,28H84A56,56,0,0,0,28,84v88a56,56,0,0,0,56,56h88a56,56,0,0,0,56-56V84A56,56,0,0,0,172,28ZM128,176a48,48,0,1,1,48-48A48,48,0,0,1,128,176Zm52-88a12,12,0,1,1,12-12A12,12,0,0,1,180,88Z"/>
+{% endcapture %}
+
+{% include socials/_social_icon.html icon_size=site.company.icon_size link=social_link title=social_title viewbox_size=viewbox_size svg_content=social_svg_content %}
