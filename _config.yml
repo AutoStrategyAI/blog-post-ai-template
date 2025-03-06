@@ -18,7 +18,7 @@ company:
   socials:
     github: "hmm"
     twitter: "hmmmmmmm"
-  icon_size: "32"
+  icon_size: "24"
   colors:
     background: "#19191f"
     foreground: "#f1f1f1"
@@ -34,7 +34,13 @@ company:
 # Navigation items
 navigation:
   header:
-    - title: "Call To Action"
+    - title: "CTA"
+      url: "/"
+    - title: "CTA"
+      url: "/"
+    - title: "CTA"
+      url: "/"
+    - title: "CTA"
       url: "/"
   footer:
     - title: "Terms and Conditions"

@@ -7,6 +7,7 @@ $company_colors_foreground: {{ site.company.colors.foreground }};
 $company_colors_accent: {{ site.company.colors.accent }};
 $company_fonts_heading_name: {{ site.company.fonts.heading.name }};
 $company_fonts_body_name: {{ site.company.fonts.body.name }};
+$company_company_icon_size: {{ site.company.icon_size }}px;
 
 // Color variables
 $color-background: $company_colors_background !default;
@@ -18,6 +19,8 @@ $color-text-accent: $company_colors_accent !default;
 $color-nav-link: $company_colors_accent !default;
 $color-primary-link: $company_colors_accent !default;
 $color-code: $company_colors_accent !default;
+
+$social-icon-size: $company_company_icon_size !default;
 
 // Font variables
 $heading-font-family: $company_fonts_heading_name, Arial, sans-serif;

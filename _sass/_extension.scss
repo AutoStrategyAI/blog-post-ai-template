@@ -152,3 +152,14 @@ h6, .h6 { font-family: $heading-font-family; }
   display: inline-block;
   border-radius: 0.4em;
 }
+
+.social-icons {
+  display: table;
+}
+
+.social-icons > img,
+.social-icons > svg
+ {
+  width: $social-icon-size;
+  height: $social-icon-size;
+}
