@@ -5,28 +5,9 @@
 
   <body>
 
-    <div>
-
       <header class="header-background">
-
         {% include header.html %}
-
-        <div class="container mx-auto px-2 mb-2 clearfix header-text">
-          <h1 class="h0 inline-block sm-width-full py-4 mt-3 header-title">{{ site.title }}</h1>
-
-          <div class="clearfix mb-4 py-1">
-            <div class="col-4 sm-width-full left border-top-thin">
-              <div class="table">
-                <div class="inline-block mt-3">
-                    <a href="{{ site.company.cta.url }}" class="call-to-action">{{ site.company.cta.text }}</a>
-                </div>
-              </div>
-              <!-- Set site description in config.yml -->
-              <p class="h4 lh-condensed font-smoothing mt-2 py-1">{{ site.description }}</p>
-            </div>
-          </div>
-
-        </div>
+        {% include hero.html %}
       </header>
 
       <div class="container mx-auto px-2 py-4">
@@ -35,7 +16,6 @@
         {% endfor %}
 
         {% if paginator.total_posts > paginator.per_page %}
-        <!-- Pagination links -->
         <div class="pagination">
           {% if paginator.previous_page %}
           <a href="{{ paginator.previous_page_path }}" class="previous">
@@ -56,7 +36,6 @@
         {% endif %}
       </div>
 
-    </div>
 
     {% include footer.html %}
     {% include analytics.html %}
