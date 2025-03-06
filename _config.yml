@@ -26,10 +26,8 @@ company:
   fonts:
     google:
       - "Roboto:ital,wght@0,100..900;1,100..900"
-    heading:
-      name: "'Helvetica Neue', 'Roboto'"
-    body:
-      name: "'Helvetica Neue', 'Roboto'"
+    heading: "'Helvetica Neue', 'Roboto'"
+    body: "'Helvetica Neue', 'Roboto'"
 
 # Navigation items
 navigation:
@@ -40,15 +38,13 @@ navigation:
       url: "/"
     - title: "CTA"
       url: "/"
-    - title: "CTA"
-      url: "/"
   footer:
     - title: "Terms and Conditions"
-      url: "/"
+      url: "/terms-and-conditions"
     - title: "Privacy Policy"
-      url: "/"
+      url: "/privacy-policy"
     - title: "Cookie Policy"
-      url: "/"
+      url: "/cookie-policy"
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
