@@ -20,6 +20,12 @@ h6, .h6 { font-family: $heading-font-family; }
   .col-lg-12 { width: 100%; }
 }
 
+.my-0 { margin-top: 0; margin-bottom: 0; }
+.my-1 { margin-top: $spacer-1; margin-bottom: $spacer-1; }
+.my-2 { margin-top: $spacer-2; margin-bottom: $spacer-2; }
+.my-3 { margin-top: $spacer-3; margin-bottom: $spacer-3; }
+.my-4 { margin-top: $spacer-4; margin-bottom: $spacer-4; }
+
 .pt-0 { padding-top: 0; }
 .pr-0 { padding-right: 0; }
 .pb-0 { padding-bottom: 0; }
@@ -76,6 +82,14 @@ h6, .h6 { font-family: $heading-font-family; }
   .pr-lg-4 { padding-right: $spacer-4; }
   .pb-lg-4 { padding-bottom: $spacer-4; }
   .pl-lg-4 { padding-left: $spacer-4; }
+}
+
+.valign-top {
+  vertical-align: top;
+}
+
+.valign-middle {
+  vertical-align: middle;
 }
 
 /* Call to action */
@@ -136,5 +150,5 @@ h6, .h6 { font-family: $heading-font-family; }
 .logo {
   max-width: 100px;
   display: inline-block;
-  vertical-align: middle; 
+  border-radius: 0.4em;
 }
