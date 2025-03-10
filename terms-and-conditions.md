@@ -7,7 +7,7 @@ date: 2025-03-10 12:30:26 +0100
 
 ## Introduction
 
-Welcome to {{ site.title }}. These Terms and Conditions ("Terms") govern your use of our website located at {{ site.baseurl | prepend: site.url }} ("Website") and form a binding legal agreement between you and {{ site.author }} ("we", "us", or "our").
+Welcome to {{ site.title }}. These Terms and Conditions ("Terms") govern your use of our website located at [{{ site.baseurl | prepend: site.url }}]({{ site.baseurl | prepend: site.url }}) ("Website") and form a binding legal agreement between you and {{ site.author }} ("we", "us", or "our").
 
 By accessing or using the Website, you agree to be bound by these Terms. If you disagree with any part of the Terms, you may not access the Website.
 
