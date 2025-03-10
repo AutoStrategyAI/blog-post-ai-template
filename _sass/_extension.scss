@@ -92,7 +92,6 @@ h6, .h6 { font-family: $heading-font-family; }
 .valign-middle {
   vertical-align: middle;
 }
-
 /* Social icons */
 .social-icons {
   display: table;
@@ -106,11 +105,21 @@ h6, .h6 { font-family: $heading-font-family; }
 }
 
 @media (max-width: $breakpoint-lg) {
+  .site-title-link {
+    width: 100%;
+    margin-bottom: $spacer-1;
+  }
+
+  .header-menu {
+    margin-bottom: $spacer-2;
+  }
 
   .social-icons {
     float: initial;
   }
 }
+
+
 /* Call to action */
 .call-to-action {
   font-size: 1.5em;
@@ -132,10 +141,10 @@ h6, .h6 { font-family: $heading-font-family; }
   width: 100%;
 }
 
-.pagination a,
-.pagination span {
+.pagination a {
   display: inline-block; /* Makes elements sit side by side */
   text-decoration: none;
+  min-width: 2em;
 }
 
 /* Ensuring previous and next buttons are properly displayed */
@@ -144,20 +153,12 @@ h6, .h6 { font-family: $heading-font-family; }
   text-align: center;
   padding: 5px 10px;
   padding-top: 2px;
-  border-radius: 5px;
   margin: 5px;
-  background-color: $color-foreground;
   color: $color-background;
-}
-
-.pagination span.next,
-.pagination span.previous {
-  cursor: default;
 }
 
 .pagination a.previous,
 .pagination a.next {
-  opacity: 1;
   font-weight: bold;
 }
 
@@ -194,6 +195,16 @@ h6, .h6 { font-family: $heading-font-family; }
     text-align: right;
   }
 }
+
+/* Theme color utilities */
+.footer-background { background-color: $color-background; }
+.footer-border { border-color: $color-foreground; }
+.footer-title { color: $color-title; }
+.footer-text { color: $color-foreground; }
+.footer-social { fill: $color-foreground; }
+.footer-social-accent { fill: $color-dot-accent; }
+.footer-link:hover { color: $color-nav-link !important; } // used for navigation links on homepage
+.text-accent { color: $color-text-accent; } // used for date in post list and home link
 
 /* Middle section content container */
 .section-content {
