@@ -20,17 +20,17 @@ company:
     url: "/"
   socials:
     youtube: "@username"
-    instagram: "username"
-    facebook: "username"
+    instagram: username
+    facebook: username
     tiktok: "@username"
-    x: "username"
-    linkedin: "username"
-    pinterest: "username"
-    telegram: "username"
-    discord: "username"
-    github: "username"
-    email: "test@test.com"
-    phone: "username"
+    x: username
+    linkedin: in/username
+    pinterest: username
+    telegram: username
+    discord: username
+    github: username
+    email: test@test.com
+    phone: +4512345678
   icon_size: "24"
   colors:
     main:
