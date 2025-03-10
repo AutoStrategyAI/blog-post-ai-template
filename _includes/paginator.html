@@ -1,0 +1,27 @@
+{% for post in paginator.posts %}
+  {% include post_block.html %}
+{% endfor %}
+
+{% if paginator.total_posts > paginator.per_page %}
+<div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">
+        &lt;
+      </a>
+    {% else %}
+      <span class="previous">&nbsp;</span>
+    {% endif %}
+
+    <span class="page_number">
+        Page {{ paginator.page }} / {{ paginator.total_pages }}
+    </span>
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">
+        &gt;
+      </a>
+    {% else %}
+      <span class="next">&nbsp;</span>
+    {% endif %}
+</div>
+{% endif %}
