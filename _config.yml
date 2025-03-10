@@ -68,7 +68,7 @@ navigation:
 url: https://127.0.0.1:4000/
 
 # Paginate after X amount of posts
-paginate: 3
+paginate: 10
 
 #
 # NOTHING TO CHANGE BEYOND THIS POINT
