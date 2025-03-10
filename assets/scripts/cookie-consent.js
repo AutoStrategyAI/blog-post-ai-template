@@ -135,6 +135,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Show modal
   const showModal = function() {
+    // Make sure we have the latest preferences from localStorage
+    loadPreferences();
+    
     // Update checkboxes to reflect current state
     if (analyticsCheckbox) {
       analyticsCheckbox.checked = cookieConsent.analytics;
@@ -170,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cookieConsent.analytics = true;
     cookieConsent.marketing = true;
     
-    savePreferences();
+    savePreferences(true); // Skip reading from checkboxes
     hideBanner();
     applyPreferences();
   };
@@ -180,20 +183,22 @@ document.addEventListener('DOMContentLoaded', function() {
     cookieConsent.analytics = false;
     cookieConsent.marketing = false;
     
-    savePreferences();
+    savePreferences(true); // Skip reading from checkboxes
     hideBanner();
     applyPreferences();
   };
   
   // Save preferences
-  const savePreferences = function() {
-    // Update consent state from checkboxes
-    if (analyticsCheckbox) {
-      cookieConsent.analytics = analyticsCheckbox.checked;
-    }
-    
-    if (marketingCheckbox) {
-      cookieConsent.marketing = marketingCheckbox.checked;
+  const savePreferences = function(skipCheckboxRead) {
+    // Update consent state from checkboxes if not skipped
+    if (!skipCheckboxRead) {
+      if (analyticsCheckbox) {
+        cookieConsent.analytics = analyticsCheckbox.checked;
+      }
+      
+      if (marketingCheckbox) {
+        cookieConsent.marketing = marketingCheckbox.checked;
+      }
     }
     
     // Save to localStorage
@@ -226,7 +231,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   if (savePreferencesBtn) {
-    savePreferencesBtn.addEventListener('click', savePreferences);
+    savePreferencesBtn.addEventListener('click', function() {
+      savePreferences(false); // Read from checkboxes
+    });
   }
   
   if (settingsTrigger) {
