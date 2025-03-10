@@ -12,6 +12,9 @@ logo: images/logo.jpg
 
 # Company details
 company:
+  analytics:
+    google_id: TEST_ID
+    google_ads: true
   cta:
     text: "Visit our website"
     url: "/"
@@ -62,9 +65,6 @@ url: https://127.0.0.1:4000/
 
 # Paginate after X amount of posts
 paginate: 3
-
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
 
 #
 # NOTHING TO CHANGE BEYOND THIS POINT

@@ -1,0 +1,54 @@
+<div id="cookie-consent-banner" class="cookie-consent-banner">
+  <div class="cookie-consent-container">
+    <div class="cookie-consent-text">
+      <h3>Cookie Consent</h3>
+      <p>This website uses cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+    </div>
+    <div class="cookie-consent-buttons">
+      <button id="cookie-consent-customize" class="cookie-btn cookie-btn-customize">Customize</button>
+      <button id="cookie-consent-reject" class="cookie-btn cookie-btn-reject">Reject All</button>
+      <button id="cookie-consent-accept" class="cookie-btn cookie-btn-accept">Accept All</button>
+    </div>
+  </div>
+</div>
+
+<div id="cookie-settings-modal" class="cookie-settings-modal">
+  <div class="cookie-settings-container">
+    <div class="cookie-settings-header">
+      <h3>Cookie Settings</h3>
+      <button id="cookie-settings-close" class="cookie-settings-close">&times;</button>
+    </div>
+    <div class="cookie-settings-content">
+      <div class="cookie-settings-section">
+        <div class="cookie-settings-option">
+          <input type="checkbox" id="necessary-cookies" checked disabled>
+          <label for="necessary-cookies">
+            <strong>Necessary Cookies</strong>
+            <p>These cookies are essential for the website to function properly and cannot be disabled.</p>
+          </label>
+        </div>
+        <div class="cookie-settings-option">
+          <input type="checkbox" id="analytics-cookies">
+          <label for="analytics-cookies">
+            <strong>Analytics Cookies</strong>
+            <p>These cookies help us understand how visitors interact with our website, helping us improve our services.</p>
+          </label>
+        </div>
+        <div class="cookie-settings-option">
+          <input type="checkbox" id="marketing-cookies">
+          <label for="marketing-cookies">
+            <strong>Marketing Cookies</strong>
+            <p>These cookies are used to track visitors across websites to display relevant advertisements.</p>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="cookie-settings-footer">
+      <button id="cookie-settings-save" class="cookie-btn cookie-btn-accept">Save Preferences</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cookie Settings button moved to footer_footnotes.html -->
+
+<script src="{{ '/assets/scripts/cookie-consent.js' | prepend: site.baseurl | prepend: site.url }}" async defer></script>

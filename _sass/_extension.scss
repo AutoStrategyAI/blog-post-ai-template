@@ -182,6 +182,13 @@ h6, .h6 { font-family: $heading-font-family; }
 
 .footer-footnotes {
   font-size: 0.8em;
+  text-align: left;
+  float: left;
+}
+
+.footer-footnotes .footer-cookie-settings {
+  margin-bottom: $spacer-1;
+  display: inline-block;
 }
 
 @media (min-width: $breakpoint-lg) {
@@ -191,8 +198,9 @@ h6, .h6 { font-family: $heading-font-family; }
     float: right;
   }
 
-  .footer-footnotes {
-    text-align: right;
+  .footer-footnotes .footer-cookie-settings {
+    margin-bottom: 0;
+    float: right;
   }
 }
 
