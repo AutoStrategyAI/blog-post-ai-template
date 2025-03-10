@@ -97,13 +97,33 @@ h6, .h6 { font-family: $heading-font-family; }
   display: table;
 }
 
-.social-icons > img,
-.social-icons > svg
+.social-icon
  {
   width: $social-icon-size;
   height: $social-icon-size;
+  
+  &:hover {
+    fill: $color-dot-accent;
+  }
 }
 
+header .social-icon,
+footer .social-icon
+ {
+  fill: $color-foreground;
+}
+
+.social-icon
+ {
+  width: $social-icon-size;
+  height: $social-icon-size;
+  
+  &:hover {
+    fill: $color-dot-accent;
+  }
+}
+
+/* Header */
 @media (max-width: $breakpoint-lg) {
   .site-title-link {
     width: 100%;
@@ -118,7 +138,6 @@ h6, .h6 { font-family: $heading-font-family; }
     float: initial;
   }
 }
-
 
 /* Call to action */
 .call-to-action {
