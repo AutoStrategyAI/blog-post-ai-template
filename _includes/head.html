@@ -19,8 +19,8 @@
   <meta name="author" content="{{ site.author }}" />
   <meta name="keywords" content="{{ site.keywords }}" />
   
-  {% include google_fonts.html %}
-  {% include analytics.html %}
+  {% include head/google_fonts.html %}
+  {% include head/analytics.html %}
 
   {% assign user_url = site.url | append: site.baseurl %}
   {% assign full_base_url = user_url | default: site.github.url %}
