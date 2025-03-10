@@ -105,6 +105,12 @@ h6, .h6 { font-family: $heading-font-family; }
   height: $social-icon-size;
 }
 
+@media (max-width: $breakpoint-lg) {
+
+  .social-icons {
+    float: initial;
+  }
+}
 /* Call to action */
 .call-to-action {
   font-size: 1.5em;

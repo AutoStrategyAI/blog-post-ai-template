@@ -1,4 +1,9 @@
-{% assign social_link = "https://youtube.com/" | append: include.username %}
+{% assign username = include.username %}
+{% if username contains "@" %}
+  {% assign social_link = "https://www.youtube.com/" | append: username %}
+{% else %}
+  {% assign social_link = "https://www.youtube.com/channel/" | append: username %}
+{% endif %}
 {% assign social_title = "Find me on YouTube" %}
 {% assign viewbox_size = "0 0 256 256" %}
 {% capture social_svg_content %}
