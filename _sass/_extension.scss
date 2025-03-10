@@ -89,9 +89,6 @@ h6, .h6 { font-family: $heading-font-family; }
   vertical-align: top;
 }
 
-.valign-middle {
-  vertical-align: middle;
-}
 /* Social icons */
 .social-icons {
   display: table;
@@ -101,6 +98,7 @@ h6, .h6 { font-family: $heading-font-family; }
  {
   width: $social-icon-size;
   height: $social-icon-size;
+  fill: $color-body-foreground;
   
   &:hover {
     fill: $color-dot-accent;
@@ -159,26 +157,32 @@ footer .social-icon
   margin-top: 20px;
   width: 100%;
 }
-
-.pagination a {
-  display: inline-block; /* Makes elements sit side by side */
-  text-decoration: none;
-  min-width: 2em;
-}
-
 /* Ensuring previous and next buttons are properly displayed */
 .pagination .previous,
 .pagination .next {
   text-align: center;
-  padding: 5px 10px;
-  padding-top: 2px;
+  padding: 5px;
   margin: 5px;
   color: $color-background;
 }
 
-.pagination a.previous,
-.pagination a.next {
-  font-weight: bold;
+.pagination a {
+  display: inline-block;
+  min-width: 2em;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.pagination a:hover {
+  color: $color-text-accent;
+}
+
+.pagination a.previous::before {
+  content: "\25C0";
+}
+
+.pagination a.next::after {
+  content: "\25B6";
 }
 
 /* Company Logo */
@@ -205,20 +209,14 @@ footer .social-icon
   float: left;
 }
 
-.footer-footnotes .footer-cookie-settings {
-  margin-bottom: $spacer-1;
-  display: inline-block;
+.footer-footnotes a:hover {
+  color: $color-text-accent;
 }
 
 @media (min-width: $breakpoint-lg) {
   .footer-menu {
     margin-top: 0;
     text-align: right;
-    float: right;
-  }
-
-  .footer-footnotes .footer-cookie-settings {
-    margin-bottom: 0;
     float: right;
   }
 }
@@ -234,9 +232,6 @@ footer .social-icon
 .text-accent { color: $color-text-accent; } // used for date in post list and home link
 
 /* Middle section content container */
-.section-content {
-  min-height: 80vh;
-}
 
 @media (max-width: $breakpoint-lg) {
   .section-content {

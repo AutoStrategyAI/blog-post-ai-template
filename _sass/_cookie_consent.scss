@@ -216,3 +216,15 @@
 body.has-cookie-consent .cookie-settings-trigger {
   display: block;
 }
+
+.footer-cookie-settings {
+  margin-bottom: $spacer-1;
+  display: inline-block;
+}
+
+@media (min-width: $breakpoint-lg) {
+  .footer-cookie-settings {
+    margin-bottom: 0;
+    float: right;
+  }
+}

@@ -33,8 +33,12 @@ company:
     phone: "username"
   icon_size: "24"
   colors:
-    background: "#19191f"
-    foreground: "#f1f1f1"
+    main:
+      background: "#19191f"
+      foreground: "#f1f1f1"
+    body:
+      background: "#f1f1f1"
+      foreground: "#19191f"
     accent: "#E74727"
   fonts:
     google:
