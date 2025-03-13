@@ -122,6 +122,13 @@ footer .social-icon
 }
 
 /* Header */
+.site-header-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: $spacer-1;
+  border-radius: 3px;
+}
+
 .site-description {
   font-size: $prose-font-size;
 }
@@ -171,7 +178,7 @@ footer .social-icon
   text-align: center;
   padding: 5px;
   margin: 5px;
-  color: $color-background;
+  color: $color-body-text;
 }
 
 .pagination a {

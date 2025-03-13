@@ -1,9 +1,10 @@
 <div class="clearfix">
   <div class="container mx-auto px-2 py-2">
-      <a class="inline-block align-middle link-primary text-accent mr-2 site-title-link" href="{{ site.baseurl }}/">
-        {{ site.title }}
-      </a>
-      {% include navigation/nav_header.html %}
-      {% include social_icons.html %}
+    <a class="inline-block align-middle link-primary text-accent mr-2 site-title-link" href="{{ site.baseurl }}/">
+      {% if site.logo %}<img src="{{ site.logo | prepend: '/assets/' | prepend: full_base_url }}" alt="{{ site.author }} Logo" class="align-middle site-header-logo inline-block" />{% endif %}
+      <span class="align-middle">{{ site.title }}</span>
+    </a>
+    {% include navigation/nav_header.html %}
+    {% include social_icons.html %}
   </div>
 </div>
