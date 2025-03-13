@@ -122,6 +122,10 @@ footer .social-icon
 }
 
 /* Header */
+.site-description {
+  font-size: $prose-font-size;
+}
+
 @media (max-width: $breakpoint-lg) {
   .site-title-link {
     width: 100%;
@@ -134,6 +138,10 @@ footer .social-icon
 
   .social-icons {
     float: initial;
+  }
+
+  .site-description {
+    font-size: $prose-font-size-mobile;
   }
 }
 

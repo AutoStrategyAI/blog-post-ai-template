@@ -17,8 +17,8 @@ $color-foreground: $company_colors_main_foreground !default;
 $color-body-background: $company_colors_body_background !default;
 $color-body-foreground: $company_colors_body_foreground !default;
 $color-dot-accent: $company_colors_accent !default;
-$color-title: $company_colors_main_foreground !default;
-$color-body-text: $company_colors_main_background !default;
+$color-title: $company_colors_body_foreground !default;
+$color-body-text: $company_colors_body_foreground !default;
 $color-text-accent: $company_colors_accent !default;
 $color-nav-link: $company_colors_accent !default;
 $color-primary-link: $company_colors_accent !default;
@@ -41,10 +41,11 @@ $body-font-family: $company_fonts_body_name, Arial, sans-serif;
 @import
         "variables",
         "prefix", // fix variables
-        "base",
-        "components",
-        "utilities",
+        "base", // DO NOT TOUCH
+        "components", // DO NOT TOUCH
+        "utilities", // DO NOT TOUCH
         "extension", // extend theme
         "cookie_consent", // cookie consent styles
-        "postfix" // fix theme
+        "postfix", // fix theme
+        "custom" // custom SCSS for companies
 ;
