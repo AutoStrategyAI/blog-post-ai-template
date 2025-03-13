@@ -147,6 +147,10 @@ footer .social-icon
     float: initial;
   }
 
+  header .social-icons {
+    display: none;
+  }
+
   .site-description {
     font-size: $prose-font-size-mobile;
   }
@@ -226,6 +230,10 @@ footer .social-icon
 
 .footer-footnotes a:hover {
   color: $color-text-accent;
+}
+
+footer .social-icons {
+  margin-top: $spacer-2;
 }
 
 @media (min-width: $breakpoint-lg) {

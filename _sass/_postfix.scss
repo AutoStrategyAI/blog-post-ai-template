@@ -1,35 +1,44 @@
 // Fix headers and paragraphs on mobile
 @media (max-width: $breakpoint-lg) {
-    h1, .h1,
-    h2, .h2,
-    h3, .h3,
-    h4, .h4,
-    h5, .h5,
-    h6, .h6 { width: 100%; }
-
-    .h0 {
-      padding-top: $spacer-1;
-      padding-bottom: $spacer-3;
-      font-size: $h2-size;
-    }
-  
-    .h1 {
-      font-size: $h3-size;
-    }
-  
-    .h2 {
-      font-size: $h4-size;
-    }
-  
-    .h3 {
-      font-size: $h4-size;
-    }
-  
-    .h4 {
-      font-size: $h5-size;
-    }
-  
-    .prose p {
-      font-size: $prose-font-size-mobile;
-    }
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 { width: 100%; }
+  .h0 {
+    padding-top: $spacer-1;
+    padding-bottom: $spacer-3;
+    font-size: $h2-size;
   }
+
+  .h1 {
+    font-size: $h3-size;
+  }
+
+  .h2 {
+    font-size: $h4-size;
+  }
+
+  .h3 {
+    font-size: $h4-size;
+  }
+
+  .h4 {
+    font-size: $h5-size;
+  }
+
+  .prose p {
+    font-size: $prose-font-size-mobile;
+  }
+}
+
+// Force title color
+.header-title {
+  color: $color-foreground;
+}
+
+// Give a splash of color to the CTA in the articles
+article a {
+  color: $color-text-accent;
+}
