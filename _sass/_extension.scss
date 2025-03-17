@@ -123,10 +123,8 @@ footer .social-icon
 
 /* Header */
 .site-header-logo {
-  width: 24px;
-  height: 24px;
+  max-height: 24px;
   margin-right: $spacer-1;
-  border-radius: 3px;
 }
 
 .site-description {
@@ -204,14 +202,13 @@ footer .social-icon
 }
 
 /* Company Logo */
-.logo {
-  max-width: 100px;
+footer .logo {
+  max-width: 80px;
   display: inline-block;
-  border-radius: 0.4em;
 }
 
 @media (max-width: $breakpoint-lg) {
-  .logo {
+  footer .logo {
     margin-bottom: $spacer-2;
   }
 }
