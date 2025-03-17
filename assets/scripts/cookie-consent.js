@@ -48,30 +48,55 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle Google Analytics
     if (cookieConsent.analytics) {
       loadGoogleAnalytics();
+      
+      // Load Microsoft Clarity if ID is available
+      loadMicrosoftClarity();
     }
     
     // Handle Google Ads separately if marketing cookies are accepted
-    const gaId = document.querySelector('meta[name="ga-id"]')?.getAttribute('content');
-    const gaAdsEnabled = document.querySelector('meta[name="ga-ads"]')?.getAttribute('content') === 'true';
-    if (cookieConsent.marketing && gaAdsEnabled && !cookieConsent.analytics) {
-      // If analytics is not enabled but marketing is, we need to load Google Ads directly
-      loadGoogleAds(gaId);
+    if (cookieConsent.marketing) {
+      // Load Google Ads if ID is available
+      loadGoogleAds();
     }
     
     // Add class to body to indicate consent has been given
     document.body.classList.add('has-cookie-consent');
   };
   
-  // Load Google Analytics and Google Ads if enabled
+  // Load Microsoft Clarity
+  const loadMicrosoftClarity = function() {
+    // Check if Microsoft Clarity is already loaded
+    if (window.clarity) {
+      return;
+    }
+    
+    // Get Microsoft Clarity ID from meta tag
+    const clarityId = document.querySelector('meta[name="clarity-id"]')?.getAttribute('content');
+    
+    if (!clarityId) {
+      console.warn('Microsoft Clarity ID not found');
+      return;
+    }
+    
+    // Create and append the Microsoft Clarity script
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", clarityId);
+    
+    console.log('Microsoft Clarity loaded');
+  };
+  
+  // Load Google Analytics
   const loadGoogleAnalytics = function() {
     // Check if Google Analytics is already loaded
     if (window.ga) {
       return;
     }
     
-    // Get Google Analytics ID and Ads status from meta tags
+    // Get Google Analytics ID from meta tag
     const gaId = document.querySelector('meta[name="ga-id"]')?.getAttribute('content');
-    const gaAdsEnabled = document.querySelector('meta[name="ga-ads"]')?.getAttribute('content') === 'true';
     
     if (!gaId) {
       console.warn('Google Analytics ID not found');
@@ -89,33 +114,42 @@ document.addEventListener('DOMContentLoaded', function() {
       };
       window.ga.l = +new Date();
       
-      window.ga('create', gaId, 'auto');
-      window.ga('send', 'pageview');
+      // Get page information from meta tags
+      const pageUrl = document.querySelector('meta[name="page-url"]')?.getAttribute('content') || window.location.pathname;
+      const pageTitle = document.querySelector('meta[name="page-title"]')?.getAttribute('content') || document.title;
       
-      // Load Google Ads if enabled
-      if (gaAdsEnabled) {
-        loadGoogleAds(gaId);
-      }
+      window.ga('create', gaId, 'auto');
+      window.ga('send', 'pageview', {
+        'page': pageUrl,
+        'title': pageTitle
+      });
     };
     
     document.head.appendChild(script);
   };
   
   // Load Google Ads
-  const loadGoogleAds = function(gaId) {
+  const loadGoogleAds = function() {
+    // Check if Google Ads is already loaded
+    if (window.adsbygoogle) {
+      return;
+    }
+    
+    // Get Google Ads ID from meta tag
+    const adsId = document.querySelector('meta[name="ga-ads-id"]')?.getAttribute('content');
+    
+    if (!adsId) {
+      console.warn('Google Ads ID not found');
+      return;
+    }
+    
     console.log('Loading Google Ads');
     
     // Create and append the Google Ads script
     const script = document.createElement('script');
     script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js';
-    
-    script.onload = function() {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', gaId); // This would be replaced with actual conversion ID
-    };
+    script.crossOrigin = 'anonymous';
+    script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsId}`;
     
     document.head.appendChild(script);
   };

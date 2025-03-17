@@ -14,7 +14,8 @@ logo: images/logo.jpg
 company:
   analytics:
     google_id: TEST_ID
-    google_ads: true
+    google_ads_id: TEST_ID
+    microsoft_clarity_id: TEST_ID
   cta:
     text: "Visit our website"
     url: "/"
