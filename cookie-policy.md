@@ -49,6 +49,6 @@ The date at the bottom of this Cookie Policy indicates when it was last updated.
 
 ## Where can you get further information?
 
-If you have any questions about our use of cookies or other technologies, please email us at {{ site.email }} or contact us through the methods described on our Contact page.
+If you have any questions about our use of cookies or other technologies, please email us.
 
 **Last Updated: {{ page.date | date: '%B %d, %Y' }}**

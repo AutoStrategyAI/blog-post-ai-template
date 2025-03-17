@@ -88,6 +88,6 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 
 ## Contact Us
 
-If you have any questions about this Privacy Policy, please contact us at [{{ site.company.socials.email }}](mailto:{{ site.company.socials.email }}).
+If you have any questions about this Privacy Policy, please contact us.
 
 **Last Updated: {{ page.date | date: '%B %d, %Y' }}**
