@@ -51,10 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Handle Google Ads separately if marketing cookies are accepted
+    const gaId = document.querySelector('meta[name="ga-id"]')?.getAttribute('content');
     const gaAdsEnabled = document.querySelector('meta[name="ga-ads"]')?.getAttribute('content') === 'true';
     if (cookieConsent.marketing && gaAdsEnabled && !cookieConsent.analytics) {
       // If analytics is not enabled but marketing is, we need to load Google Ads directly
-      loadGoogleAds();
+      loadGoogleAds(gaId);
     }
     
     // Add class to body to indicate consent has been given
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Load Google Ads if enabled
       if (gaAdsEnabled) {
-        loadGoogleAds();
+        loadGoogleAds(gaId);
       }
     };
     
@@ -101,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
   
   // Load Google Ads
-  const loadGoogleAds = function() {
+  const loadGoogleAds = function(gaId) {
     console.log('Loading Google Ads');
     
     // Create and append the Google Ads script
@@ -113,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'AW-CONVERSION_ID'); // This would be replaced with actual conversion ID
+      gtag('config', gaId); // This would be replaced with actual conversion ID
     };
     
     document.head.appendChild(script);

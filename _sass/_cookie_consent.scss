@@ -9,11 +9,11 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #f8f9fa;
+  background-color: $color-body-background;
   z-index: 9999;
   padding: 1rem;
   display: none; /* Hidden by default, shown with JS */
-  border-top: 1px solid #000;
+  border-top: 1px solid $color-body-foreground;
   
   &.visible {
     display: block !important; /* Use !important to override any other styles */
@@ -80,7 +80,7 @@
   }
   
   .cookie-settings-container {
-    background-color: white;
+    background-color: $color-body-background;
     border-radius: 8px;
     max-width: min(600px, 90%);
     width: 100%;
@@ -92,7 +92,7 @@
   
   .cookie-settings-header {
     padding: 1rem;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid $color-body-foreground;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -109,10 +109,10 @@
       cursor: pointer;
       padding: 0;
       line-height: 1;
-      color: #6c757d;
+      color: $color-body-foreground;
       
       &:hover {
-        color: #343a40;
+        color: $color-nav-link;
       }
     }
   }
@@ -129,7 +129,7 @@
     .cookie-settings-option {
       display: flex;
       padding: 0.75rem 0;
-      border-bottom: 1px solid #f1f1f1;
+      border-bottom: 1px solid $color-body-foreground;
       
       &:last-child {
         border-bottom: none;
@@ -155,7 +155,7 @@
         p {
           margin: 0;
           font-size: 0.875rem;
-          color: #6c757d;
+          color: $color-body-foreground;
         }
       }
     }
@@ -163,7 +163,7 @@
   
   .cookie-settings-footer {
     padding: 1rem;
-    border-top: 1px solid #dee2e6;
+    border-top: 1px solid $color-body-foreground;
     display: flex;
     justify-content: flex-end;
   }
@@ -184,27 +184,27 @@
   
   &.cookie-btn-customize {
     background-color: transparent;
-    border-color: #6c757d;
-    color: #6c757d;
+    border-color: $color-body-foreground;
+    color: $color-body-foreground;
     
     &:hover {
-      background-color: #f8f9fa;
+      background-color: $color-nav-link;
     }
   }
   
   &.cookie-btn-reject {
-    background-color: #f8f9fa;
-    border-color: #dee2e6;
-    color: #6c757d;
+    background-color: $color-body-background;
+    border-color: $color-body-foreground;
+    color: $color-body-foreground;
     
     &:hover {
-      background-color: #e9ecef;
+      background-color: $color-nav-link;
     }
   }
   
   &.cookie-btn-accept {
     background-color: $color-text-accent;
-    color: white;
+    color: $color-body-foreground;
     
     &:hover {
       background-color: darken($color-text-accent, 10%);

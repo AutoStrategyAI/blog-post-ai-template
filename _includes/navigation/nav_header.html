@@ -1,8 +1,13 @@
 <nav class="header-text header-menu inline-block align-middle">
-  <ul class="list-reset">
+  <button class="burger-menu-button" aria-label="Toggle navigation menu">
+    <span class="burger-bar"></span>
+    <span class="burger-bar"></span>
+    <span class="burger-bar"></span>
+  </button>
+  <ul class="list-reset nav-menu">
     {% for nav_page in site.navigation.header %}
       {% if nav_page.title %}
-      <li class="inline-block">
+      <li class="nav-item">
         <a class="align-middle link-primary header-link{% unless forloop.last %} mr-2{% endunless %}" href="{{ nav_page.url | prepend: site.baseurl }}">{{ nav_page.title }}</a>
       </li>
       {% endif %}

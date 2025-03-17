@@ -135,7 +135,6 @@ footer .social-icon
 
 @media (max-width: $breakpoint-lg) {
   .site-title-link {
-    width: 100%;
     margin-bottom: $spacer-1;
   }
 
@@ -145,6 +144,10 @@ footer .social-icon
 
   header .social-icons {
     display: none;
+  }
+
+  .header-menu {
+    float: right;
   }
 
   .site-description {
@@ -251,10 +254,95 @@ footer .social-icons {
 .text-accent { color: $color-text-accent; } // used for date in post list and home link
 
 /* Middle section content container */
-
 @media (max-width: $breakpoint-lg) {
   .section-content {
     padding-top: $spacer-2;
     padding-bottom: $spacer-2;
+  }
+}
+
+// Mobile burger menu
+.burger-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1000;
+  
+  .burger-bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 5px 0;
+    background-color: $color-foreground;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  &.active {
+    .burger-bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    
+    .burger-bar:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .burger-bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+}
+
+.nav-menu {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-item {
+  display: inline-block;
+}
+
+@media (max-width: $breakpoint-lg) {
+  .burger-menu-button {
+    display: block;
+  }
+  
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: $color-background;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 0;
+    margin: 0;
+    
+    &.active {
+      max-height: 300px;
+      opacity: 1;
+    }
+  }
+  
+  .nav-item {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    
+    a {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .nav-menu {
+    display: inline-block;
+    opacity: 1;
+    max-height: none;
   }
 }
