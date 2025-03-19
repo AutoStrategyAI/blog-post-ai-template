@@ -31,6 +31,14 @@
   .prose p {
     font-size: $prose-font-size-mobile;
   }
+
+  .call-to-action {
+    font-size: $prose-font-size;
+  }
+}
+
+.prose p {
+  margin-bottom: 0.25em;
 }
 
 // Force title color
