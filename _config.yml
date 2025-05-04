@@ -86,7 +86,14 @@ baseurl:
 theme: jekyll-swiss
 
 # Slug of paginated page
-paginate_path: "/page-:num/"
+paginate_path: "/page/:num"
+
+# Exclude pagination pages by default in sitemap
+defaults:
+  - scope:
+      path: "page"
+    values:
+      sitemap: false
 
 # Permalink slug (DO NOT TOUCH)
 permalink: /:title/
