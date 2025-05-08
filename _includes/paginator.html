@@ -1,7 +1,3 @@
-{% for post in paginator.posts %}
-  {% include post_block.html %}
-{% endfor %}
-
 {% if paginator.total_posts > paginator.per_page %}
 <div class="pagination">
     {% if paginator.previous_page %}
