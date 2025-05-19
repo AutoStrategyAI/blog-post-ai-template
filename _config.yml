@@ -10,6 +10,9 @@ description: A Description of the Blog
 keywords: "money, optimism, achievement"
 logo: images/logo.jpg
 
+# Language of the website
+locale: en-US
+
 # Company details
 company:
   analytics:

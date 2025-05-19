@@ -2,5 +2,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
 {% for font_name in site.company.fonts.google %}
-<link href="https://fonts.googleapis.com/css2?family={{ font_name }}&display=swap" rel="stylesheet" />
+{% capture font_url %}https://fonts.googleapis.com/css2?family={{ font_name }}&display=swap{% endcapture %}
+<link rel="preload" as="style" href="{{ font_url }}" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="{{ font_url }}"></noscript>
 {% endfor %}

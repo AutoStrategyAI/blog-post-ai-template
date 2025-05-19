@@ -1,18 +1,14 @@
 {% if site.company.analytics.google_id %}
-<!-- Analytics Meta Tags for Cookie Consent -->
 <meta name="ga-id" content="{{ site.company.analytics.google_id }}">
 {% endif %}
 
 {% if site.company.analytics.google_ads_id %}
-<!-- Google Ads Meta Tag -->
 <meta name="ga-ads-id" content="{{ site.company.analytics.google_ads_id }}">
 {% endif %}
 
 {% if site.company.analytics.microsoft_clarity_id %}
-<!-- Microsoft Clarity Meta Tag -->
 <meta name="clarity-id" content="{{ site.company.analytics.microsoft_clarity_id }}">
 {% endif %}
 
-<!-- Page Information for Analytics -->
 <meta name="page-url" content="{{ site.baseurl }}{{ page.url }}">
 <meta name="page-title" content="{{ page.title | replace: "'", "\\'" }}">
