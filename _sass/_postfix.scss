@@ -28,7 +28,7 @@
     font-size: $h5-size;
   }
 
-  .prose p {
+  .prose p, .prose li {
     font-size: $prose-font-size-mobile;
   }
 
@@ -45,6 +45,14 @@
 .header-title {
   color: $color-foreground;
 }
+
+// Fix line-height for all headings
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 { line-height: 1.0125; }
 
 // Give a splash of color to the CTA in the articles
 article a {
