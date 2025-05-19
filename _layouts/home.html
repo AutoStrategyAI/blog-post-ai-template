@@ -10,6 +10,10 @@
       </header>
 
       <main class="section-content container mx-auto px-2 py-4">
+        {% for post in paginator.posts %}
+          {% include post_block.html %}
+        {% endfor %}
+        
         {% include paginator.html %}
       </main>
 
