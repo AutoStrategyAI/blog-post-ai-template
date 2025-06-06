@@ -16,25 +16,25 @@ locale: en-US
 # Company details
 company:
   analytics:
-    google_id: TEST_ID
-    google_ads_id: TEST_ID
-    microsoft_clarity_id: TEST_ID
+    google_id: 
+    google_ads_id: 
+    microsoft_clarity_id: 
   cta:
     text: "Visit our website"
     url: "/"
   socials:
-    youtube: "@username"
-    instagram: username
-    facebook: username
-    tiktok: "@username"
-    x: username
-    linkedin: in/username
-    pinterest: username
-    telegram: username
-    discord: username
-    github: username
-    email: test@test.com
-    phone: +4512345678
+    youtube: 
+    instagram: 
+    facebook: 
+    tiktok: 
+    x: 
+    linkedin: 
+    pinterest: 
+    telegram: 
+    discord: 
+    github: 
+    email: 
+    phone: 
   icon_size: "24"
   colors:
     main:
@@ -47,8 +47,8 @@ company:
   fonts:
     google:
       - "Roboto:ital,wght@0,100..900;1,100..900"
-    heading: "'Helvetica Neue', 'Roboto'"
-    body: "'Helvetica Neue', 'Roboto'"
+    heading: "'Roboto'"
+    body: "'Roboto'"
 
 # Navigation items
 navigation:
